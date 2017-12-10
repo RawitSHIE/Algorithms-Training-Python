@@ -34,9 +34,9 @@ def compat_6(text):
     for i in "0123456789":
         if i in text:
             lst += [str(text.count(i))]
-    if lst.count("3") == 1 and lst.count("2") == 0 and lst.count("1") == 3 and len(lst) == 4:
+    if lst.count("3") == 1:
         return "Valid"
-    elif lst.count("2") == 2 and lst.count("1") == 2 and len(lst) == 4:
+    elif lst.count("2") == 2:
         return "Valid"
     else:
         return "Invalid"
@@ -47,9 +47,9 @@ def compat_8(text):
     for i in "0123456789":
         if i in text:
             lst += [str(text.count(i))]
-    if lst.count("3") == 2 and lst.count("2") == 0 and lst.count("1") == 2 and len(lst) == 4:
+    if lst.count("3") == 2:
         return "Valid"
-    elif lst.count("2") == 3 and lst.count("1") == 2 and len(lst) == 5:
+    elif lst.count("2") == 3:
         return "Valid"
     else:
         return "Invalid"

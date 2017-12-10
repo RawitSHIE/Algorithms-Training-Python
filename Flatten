@@ -1,0 +1,14 @@
+"""Flatten"""
+import json
+def main(text):
+    """This is main function"""
+    print([x for x in sorted(check(text, []))[::-1]])
+def check(text, listt):
+    """This is function check"""
+    for i in text:
+        if isinstance(i, list):
+            listt = check(i, listt)
+        else:
+            listt.append(i)
+    return listt
+main(json.loads(input()))
